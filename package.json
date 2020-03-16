@@ -1,0 +1,21 @@
+{
+  "name": "iLink",
+  "description": "iLink",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reruin/gamepad.git"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "robotjs": "^0.5.1",
+    "ws": "^7.2.3"
+  }
+}

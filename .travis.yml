@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - 'stable'
+script:
+  - npm install pkg -g
+  - npm run build
+
+before_deploy:
+  - mkdir gamepad_windows_amd64
+  - cp $TRAVIS_BUILD_DIR/build/gamepad_win_amd64.exe gamepad_windows_amd64/gamepad.exe
+  - tar -zcvf gamepad_windows_amd64.tar.gz gamepad_windows_amd64
+  - mkdir gamepad_darwin_amd64
+  - cp $TRAVIS_BUILD_DIR/build/gamepad_macos_amd64 gamepad_darwin_amd64/gamepad
+  - tar -zcvf gamepad_darwin_amd64.tar.gz gamepad_darwin_amd64
+  - mkdir gamepad_linux_amd64
+  - cp $TRAVIS_BUILD_DIR/build/gamepad_linux_amd64 gamepad_linux_amd64/gamepad
+  - tar -zcvf gamepad_linux_amd64.tar.gz gamepad_linux_amd64
+deploy:
+  provider: releases
+  skip_cleanup: true
+  file: "*.tar.gz"
+  file_glob: true
+  api_key: "$API_KEY"
+  on:
+    tags: true
+    draft: false

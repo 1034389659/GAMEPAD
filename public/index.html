@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/gamepad.png">
+    <title>GamePad</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="controller">
+        <div class="direction">
+            <div class="hot">
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+            <div class="cross">
+                <div class="vertical"></div>
+                <div class="horizontal"></div>
+            </div>
+        </div>
+        <div class="action">
+            <div class="circle" data-key="x"><strong>X</strong></div>
+            <div class="circle" data-key="y"><strong>Y</strong></div>
+            <div class="circle" data-key="a"><strong>A</strong></div>
+            <div class="circle" data-key="b"><strong>B</strong></div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
